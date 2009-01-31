@@ -6,6 +6,7 @@ These are the use cases that I've found need to be implemented, if you have more
 
   *	Organization Members
     *	Add New/Edits/Delete Members 
+    *	Specify/Edit Each Member Role in the Organization and His/her Permissions
     *	Edit Organization and his Information 
     *	Add New/Edit Voluntary Work 
     *	Accept/Reject Volunteers on a Voluntary Work
