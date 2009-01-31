@@ -1,0 +1,34 @@
+#labels Featured,Phase-Design
+#List Of Use Cases
+
+= List Of Use Cases =
+These are the use cases that I've found need to be implemented, if you have more in mind add them to the list.
+
+  *	Organization Members
+    *	Add New/Edits/Delete Members 
+    *	Edit Organization and his Information 
+    *	Add New/Edit Voluntary Work 
+    *	Accept/Reject Volunteers on a Voluntary Work
+    *	Creates New Groups and distribute Volunteers into them
+    *	Assign a Group one volunteer as a Group Leader
+    *	See Voluntary Work Status and Statistics
+    *	Rate Volunteers 
+    *	Create New/Edit Pages, Articles… etc.
+    *	Manage (Add, Edit and Delete) Navigation Menus
+  *	Volunteers
+    *	Edit His Information 
+    *	Browse Organizations And their Voluntary Work
+    *	Sign Up for a Voluntary Work
+    *	Write Updates and Notes for the other Group Members 
+    *	Rate Group Volunteers by Group Leaders Volunteers 
+    *	Rate Organizations That they Worked With
+    *	Recommend Organizations For Other Volunteers
+    *	Send Invitations For Volunteers to Join a new Voluntary Work
+    *	Connect to Volunteers Friends 
+    *	Subscribe to an Organization 
+    *	Invite Friends to Join PVWC by Email
+    *	Manage Notification Messages
+  *	Guests
+    *	Browse Organizations And Its Pages
+    *	Create New Organizational or Volunteer Account
+    *	Login to his/her PVWC Account
