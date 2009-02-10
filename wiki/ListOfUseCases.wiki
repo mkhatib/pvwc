@@ -4,6 +4,16 @@
 = List Of Use Cases =
 These are the use cases that I've found need to be implemented, if you have more in mind add them to the list.
 
+  *	PVWC Members
+    *	Create New/Edit Pages, Articles… etc.
+    *	Manage (Add, Edit and Delete) Navigation Menus.
+    *	Moderate Voluntary Work Added By Different Organizations.
+    *	Suggest Volunteers to work on a specific Voluntary Work created by an Organization.
+    *	View The Organizations Ratings.
+    *	View Volunteer Ratings.
+    *	Add New Prizes and Incentives.
+    *	Suggest Volunteers to work on a specific Voluntary Work created by an Organization.
+    *	Watch Voluntary Work Progress.
   *	Organization Members
     *	Add New/Edits/Delete Members 
     *	Specify/Edit Each Member Role in the Organization and His/her Permissions
@@ -14,8 +24,8 @@ These are the use cases that I've found need to be implemented, if you have more
     *	Assign a Group one volunteer as a Group Leader
     *	See Voluntary Work Status and Statistics
     *	Rate Volunteers 
-    *	Create New/Edit Pages, Articles… etc.
-    *	Manage (Add, Edit and Delete) Navigation Menus
+    *	--Create New/Edit Pages, Articles… etc.--
+    *	--Manage (Add, Edit and Delete) Navigation Menus--
   *	Volunteers
     *	Edit His Information 
     *	Browse Organizations And their Voluntary Work
