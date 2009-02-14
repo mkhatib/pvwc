@@ -13,13 +13,28 @@
       * Has Many Lectures
       * Subscribed To By Many Volunteers 
       * Belongs To Many Categories (e.g. Non-Profit, Educational ...etc)
-      * Has One Theme: Theme contains just a CSS rules for the templetes
+      * Has One Theme: Theme contains just a CSS rules for the templetes 
       * Has Many Addresses
     * Attributes
-      * Title:String
-      * Slogan:String
+      * Title:String 
+      * Slogan:String - Short Description or Subtitle (shi3ar)
       * Description:Text 
-      * Logo:String
-      * MainPage:String
+      * Logo:String - URL to the Logo Image
+      * MainPage:String - URL to the Main Page.
 
+  * Member
+    * Relationships
+      * Belongs to One Organization 
+      * Has One Role (e.g. Comments Moderator, Administrator, Volunteer Moderator...etc)
+      * Has Many Emails
+      * Has Many Addresses
+    * Attributes
+      * FirstName:String
+      * MiddleName:String
+      * Lastname:String
+      * Birthday:Date
+      * Sex:int - (0:male, 1:female)
+      * Status:int - (e.g. 0:Single, 1:Married...etc)
+      * Interests:Text
+      * Websites:Text
  
