@@ -37,4 +37,48 @@
       * Status:int - (e.g. 0:Single, 1:Married...etc)
       * Interests:Text
       * Websites:Text
+
+   * VoluntaryWork
+    * Relationships
+      * Belongs to One Organization 
+      * Wins Many Prizes (e.g. The Most Intuitive Voluntary Work)
+      * Has Many Incentives (e.g. Transportation Money)
+      * Has Many Groups
+      * Has Many Tasks (e.g. Cleaning The Streets, Planning Trees, Watering Trees..etc)
+    * Attributes
+      * Title:String
+      * Description:Text
+      * Place:String
+      * StartingDate:Date
+      * EndingDate:Date
  
+   * Group
+    * Relationships
+      * Belongs to One VoluntaryWork 
+      * Wins Many Prizes
+      * Has Many Volunteers
+      * Has Many Notes
+      * Has Many Updates
+      * Has Many Questions
+      * Has Many Tasks
+    * Attributes
+      * Title:String
+      * Description:Text
+
+   * Volunteer
+    * Relationships
+      * Belongs to many Groups 
+      * Wins Many Prizes
+      * Subscribes to Many Organizations
+      * Has Many Tasks
+    * Attributes
+      * FirstName:String
+      * MiddleName:String
+      * Lastname:String
+      * Birthday:Date
+      * Sex:int - (0:male, 1:female)
+      * Status:int - (e.g. 0:Single, 1:Married...etc)
+      * Interests:Text
+      * Websites:Text
+
+*Note:* There should be a generalized Entity (e.g. Person, or User) that is a super class for Volunteer and Member. 
