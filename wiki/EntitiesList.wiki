@@ -1,0 +1,25 @@
+= Entities List = 
+
+  * Organization
+    * Relationships
+      * Has Many Members
+      * Has Many VoluntaryWork
+      * Wins Many Prizes
+      * Has Many Articles
+      * Has Many Pages: Can have Paragraphs, Modules and Menus
+      * Has Many Event
+      * Has Many News
+      * Has Many Workshops
+      * Has Many Lectures
+      * Subscribed To By Many Volunteers 
+      * Belongs To Many Categories (e.g. Non-Profit, Educational ...etc)
+      * Has One Theme: Theme contains just a CSS rules for the templetes
+      * Has Many Addresses
+    * Attributes
+      * Title:String
+      * Slogan:String
+      * Description:Text 
+      * Logo:String
+      * MainPage:String
+
+ 
