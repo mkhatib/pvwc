@@ -82,3 +82,72 @@
       * Websites:Text
 
 *Note:* There should be a generalized Entity (e.g. Person, or User) that is a super class for Volunteer and Member. 
+
+   * Question
+    * Relationships
+      * Belongs to one Group 
+      * Has Many Answers
+      * Asked By One Volunteer
+    * Attributes
+      * Title:String
+      * Body:Text
+
+   * Answer
+    * Relationships
+      * Belongs to One Question 
+      * belongs to one Volunteer
+    * Attributes
+      * Title:String
+      * Body:Text
+
+   * Note
+    * Relationships
+      * Belongs to one Group 
+      * Belongs to one Volunteer
+     * Attributes
+      * Title:String
+      * Body:Text
+
+*Note:* I Removed Entity _Update_ here because I didn't see any difference between it an _Note_.
+
+   * Prize
+    * Relationships
+      * Belongs to one Groups 
+      * Belongs to one VoluntaryWork
+      * Belongs to one Organization
+      * Belongs to one Volunteer
+    * Attributes
+      * Title:String
+      * NumberOfWinners:int
+      * Level:int (e.g. 0:Organizational, 1:VoluntaryWork, 2:Group, 3:Volunteer )
+      * prize:String (e.g. 1000$, Golden Medal...etc)
+
+   * Task
+    * Relationships
+      * Belongs to one Group 
+      * Belongs to one VoluntaryWork
+      * Belongs to one Volunteer
+    * Attributes
+      * Title:String
+      * Description:Text
+      * Percentage:Double (e.g. 20%)
+      * Finished:Boolean 
+
+*Note:* Task Percentage and Finished Flag, could help us determine the progress of the Voluntary Work, or the Group it self, and from there we can calculate any Graphical Parameter such as Bar Chart.
+
+   * Role
+    * Relationships
+      * Has Many Members
+      * Has Many Permissions
+    * Attributes
+      * Title:String
+      * Description:Text
+
+   * Permission 
+    * Relationships
+      * Belongs to Many Roles 
+    * Attributes
+      * Title:String
+      * Action:String (e.g. Delete, Add ...etc)
+
+*Note:* I am not very satisfied by the Role, Permission Schema, There must be more advanced way to do it. We Should look into it!
