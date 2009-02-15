@@ -104,7 +104,7 @@
     * Relationships
       * Belongs to one Group 
       * Belongs to one Volunteer
-     * Attributes
+    * Attributes
       * Title:String
       * Body:Text
 
