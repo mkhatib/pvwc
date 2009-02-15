@@ -1,6 +1,6 @@
 = Entities List = 
 
-  * Organization
+== Organization ==
     * Relationships
       * Has Many Members
       * Has Many VoluntaryWork
@@ -22,7 +22,7 @@
       * Logo:String - URL to the Logo Image
       * MainPage:String - URL to the Main Page.
 
-  * Member
+== Member ==
     * Relationships
       * Belongs to One Organization 
       * Has One Role (e.g. Comments Moderator, Administrator, Volunteer Moderator...etc)
@@ -38,7 +38,7 @@
       * Interests:Text
       * Websites:Text
 
-   * VoluntaryWork
+== VoluntaryWork ==
     * Relationships
       * Belongs to One Organization 
       * Wins Many Prizes (e.g. The Most Intuitive Voluntary Work)
@@ -52,7 +52,7 @@
       * StartingDate:Date
       * EndingDate:Date
  
-   * Group
+== Group ==
     * Relationships
       * Belongs to One VoluntaryWork 
       * Wins Many Prizes
@@ -65,7 +65,7 @@
       * Title:String
       * Description:Text
 
-   * Volunteer
+== Volunteer ==
     * Relationships
       * Belongs to many Groups 
       * Wins Many Prizes
@@ -83,7 +83,7 @@
 
 *Note:* There should be a generalized Entity (e.g. Person, or User) that is a super class for Volunteer and Member. 
 
-   * Question
+== Question ==
     * Relationships
       * Belongs to one Group 
       * Has Many Answers
@@ -92,7 +92,7 @@
       * Title:String
       * Body:Text
 
-   * Answer
+== Answer ==
     * Relationships
       * Belongs to One Question 
       * belongs to one Volunteer
@@ -100,7 +100,7 @@
       * Title:String
       * Body:Text
 
-   * Note
+== Note ==
     * Relationships
       * Belongs to one Group 
       * Belongs to one Volunteer
@@ -110,7 +110,7 @@
 
 *Note:* I Removed Entity _Update_ here because I didn't see any difference between it an _Note_.
 
-   * Prize
+== Prize ==
     * Relationships
       * Belongs to one Groups 
       * Belongs to one VoluntaryWork
@@ -122,7 +122,7 @@
       * Level:int (e.g. 0:Organizational, 1:VoluntaryWork, 2:Group, 3:Volunteer )
       * prize:String (e.g. 1000$, Golden Medal...etc)
 
-   * Task
+== Task ==
     * Relationships
       * Belongs to one Group 
       * Belongs to one VoluntaryWork
@@ -135,7 +135,7 @@
 
 *Note:* Task Percentage and Finished Flag, could help us determine the progress of the Voluntary Work, or the Group it self, and from there we can calculate any Graphical Parameter such as Bar Chart.
 
-   * Role
+== Role ==
     * Relationships
       * Has Many Members
       * Has Many Permissions
@@ -143,7 +143,7 @@
       * Title:String
       * Description:Text
 
-   * Permission 
+== Permission ==
     * Relationships
       * Belongs to Many Roles 
     * Attributes
@@ -151,3 +151,68 @@
       * Action:String (e.g. Delete, Add ...etc)
 
 *Note:* I am not very satisfied by the Role, Permission Schema, There must be more advanced way to do it. We Should look into it!
+
+== Address == 
+    * Relationships
+      * Belongs to one Town
+      * Belongs to one Volunteer
+      * Belongs to one Member
+      * Belongs to one Organization
+    * Attributes
+      * Street:String
+      * Near:String 
+      * Building:String 
+      * Floor:String 
+
+
+== Town == 
+    * Relationships
+      * Belongs to one City
+      * Has Many Addresses
+    * Attributes
+      * Title:String
+
+== City == 
+    * Relationships
+      * Belongs to one Country
+      * Has Many Towns
+    * Attributes
+      * Title:String
+
+== Country == 
+    * Relationships
+      * Has Many Cities
+    * Attributes
+      * Title:String
+
+
+== Email == 
+    * Relationships
+      * Belongs to one Volunteer
+      * Belongs to one Employee
+      * Belongs to one Organization
+    * Attributes
+      * Email:String
+
+
+== Theme == 
+    * Relationships
+      * Has Many ThemeRules
+      * Belongs to Many Organizations
+    * Attributes
+      * Title:String
+      * Thumbnail:String - URL to the Thumbnail
+
+== ThemeElement == 
+    * Relationships
+      * Belongs to one Theme
+      * Has Many ThemeRules
+    * Attributes
+      * Element:String (e.g. warningMessage, body, div, p ...etc)
+
+== ThemeRule == 
+    * Relationships
+      * Belongs to one Theme
+    * Attributes
+      * Property:String (e.g. font-size, color...etc)
+      * Value:String (e.g. 12px, red)
