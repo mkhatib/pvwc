@@ -281,4 +281,32 @@
       * Title:String
       * Body:Text 
 
+== Page ==
+    * Relationships
+      * Belongs to one Organization
+      * Has Many Paragraphs
+    * Attributes
+      * Title:String
+      
+== Paragraph ==
+    * Relationships
+      * Belongs to one Page
+    * Attributes
+      * Title:String
+      * Body:Text
 
+== MenuBar ==
+    * Relationships
+      * Belongs to one Page
+      * Has Many Menus
+    * Attributes
+      * Title:String
+  
+== Menu ==
+    * Relationships
+      * Belongs to one MenuBar
+      * Has Many Menus
+    * Attributes
+      * Title:String
+      * URL:String    
+      
