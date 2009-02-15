@@ -158,6 +158,7 @@
       * Belongs to one Volunteer
       * Belongs to one Member
       * Belongs to one Organization
+      * Belongs to one Event
     * Attributes
       * Street:String
       * Near:String 
@@ -216,3 +217,68 @@
     * Attributes
       * Property:String (e.g. font-size, color...etc)
       * Value:String (e.g. 12px, red)
+
+== Category == 
+    * Relationships
+      * Has Many Organizations
+      * Has Many Events
+    * Attributes
+      * Title:String (e.g. Non-Profit, Global ...etc)
+      * Description:Text 
+
+== News == 
+    * Relationships
+      * Has Many Comments
+      * Belongs to one Organization
+    * Attributes
+      * Title:String
+      * Body:Text 
+
+== Article ==
+    * Relationships
+      * Has Many Comments
+      * Belongs to one Organization
+    * Attributes
+      * Title:String
+      * Body:Text 
+
+== Event == 
+    * Relationships
+      * Has Many Comments
+      * Has Many Addresses 
+      * Belongs to one Organization
+    * Attributes
+      * Title:String
+      * Body:Text 
+      * StartsAt:Datetime
+      * EndsAt:Datetime 
+      * HostedBy:String
+
+== Comment == 
+    * Relationships
+      * Belongs to one Event
+      * Belongs to one Article
+      * Belongs to one Workshop
+      * Belongs to one News
+      * Belongs to one Volunteer
+      * Belongs to one Member
+    * Attributes
+      * Title:String
+      * Body:Text 
+
+== Incentive ==
+    * Relationships
+      * Belongs to one Voluntary Work
+    * Attributes
+      * Title:String
+      * Description:Text 
+
+== Workshop ==
+    * Relationships
+      * Belongs to one Organization
+      * Has Many Comments
+    * Attributes
+      * Title:String
+      * Body:Text 
+
+
