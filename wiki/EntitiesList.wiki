@@ -75,12 +75,24 @@
     * Attributes
       * FirstName:String
       * MiddleName:String
+      * ThirdName:String
       * Lastname:String
       * Birthday:Date
       * Sex:int - (0:male, 1:female)
       * Status:int - (e.g. 0:Single, 1:Married...etc)
       * Interests:Text
       * Websites:Text
+      * Nationality:String
+      * PassportType:String
+      * PassportNumber:String
+      * Boold:String
+      * SSN:String
+      * Mobile:String
+      * HomePhone:String
+      * WorkPhone:String
+      * Fax:String
+
+
 
 *Note:* There should be a generalized Entity (e.g. Person, or User) that is a super class for Volunteer and Member. 
 
