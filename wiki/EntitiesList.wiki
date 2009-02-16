@@ -8,14 +8,13 @@
       * Has Many VoluntaryWork
       * Wins Many Prizes
       * Has Many Articles
-      * Has Many Pages: Can have Paragraphs, Modules and Menus
+      * <strike>Has Many Pages: Can have Paragraphs, Modules and Menus</strike>
       * Has Many Event
       * Has Many News
       * Has Many Workshops
-      * Has Many Lectures
       * Subscribed To By Many Volunteers 
       * Belongs To Many Categories (e.g. Non-Profit, Educational ...etc)
-      * Has One Theme: Theme contains just a CSS rules for the templetes 
+      * <strike>Has One Theme: Theme contains just a CSS rules for the templetes </strike>
       * Has Many Addresses
     * Attributes
       * Title:String 
