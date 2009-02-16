@@ -72,6 +72,9 @@
       * Wins Many Prizes
       * Subscribes to Many Organizations
       * Has Many Tasks
+      * Has Many VolunteerIncentive
+      * Has Many TraningCourses
+      * Has Many Languages
     * Attributes
       * FirstName:String
       * MiddleName:String
@@ -272,3 +275,51 @@
       * Body:Text 
 
 <font color="red">*_UPDATE_*</font>: I Deleted *Theme, ThemeElement, ThemeRule, Page, Paragraph, Menu, MenuBar and MenuItem* for the sake of simplicity. Khaitb. 
+
+== TrainingCourse ==
+    * Relationships
+      * Belongs to one Volunteer
+      * Has one Address
+    * Attributes
+      * Type:String
+      * CenterName:String
+      * StartingDate:Date
+      * EndingDate:Date
+      * Notes:Text
+
+
+== VolunteerIncentive ==
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * Incentive:String
+      * Shown:Boolean
+
+== Languages ==
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * language:String
+
+== Experience ==
+    * Relationships
+      * Belongs to one Volunteer
+      * Has one Address
+    * Attributes
+      * PlaceName:String
+      * StartingDate:Date
+      * EndingDate:Date
+      * WorkDone:Text
+
+== FavoriteCategory ==
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * category:String
+
+== DesiredWorkingTime ==
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * day:int
+      * dayTime:int
