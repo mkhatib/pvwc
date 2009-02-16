@@ -323,3 +323,33 @@
     * Attributes
       * day:int
       * dayTime:int
+
+== DesiredVoluntaryFeilds ==
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * Feild:String
+      * Description:Text
+
+
+
+
+== WayOfWorking == 
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * Way:String
+      * Description:Text
+      * Shown:Boolean
+
+
+
+== FavoriteState == 
+    * Relationships
+      * Has Many Volunteers
+    * Attributes
+      * State:String
+      * From:String
+      * To:String
+
+
