@@ -1,3 +1,5 @@
+<font color="red">*_UPDATE_*</font>: I Deleted *Theme, ThemeElement, ThemeRule, Page, Paragraph, Menu, MenuBar and MenuItem* for the sake of simplicity. Khaitb. 
+
 = Entities List = 
 
 == Organization ==
