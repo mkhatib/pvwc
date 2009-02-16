@@ -85,7 +85,7 @@
       * Nationality:String
       * PassportType:String
       * PassportNumber:String
-      * Boold:String
+      * Blood:String
       * SSN:String
       * Mobile:String
       * HomePhone:String
