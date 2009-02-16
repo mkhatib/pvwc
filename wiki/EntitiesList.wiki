@@ -195,29 +195,6 @@
     * Attributes
       * Email:String
 
-
-== Theme == 
-    * Relationships
-      * Has Many ThemeRules
-      * Belongs to Many Organizations
-    * Attributes
-      * Title:String
-      * Thumbnail:String - URL to the Thumbnail
-
-== ThemeElement == 
-    * Relationships
-      * Belongs to one Theme
-      * Has Many ThemeRules
-    * Attributes
-      * Element:String (e.g. warningMessage, body, div, p ...etc)
-
-== ThemeRule == 
-    * Relationships
-      * Belongs to one Theme
-    * Attributes
-      * Property:String (e.g. font-size, color...etc)
-      * Value:String (e.g. 12px, red)
-
 == Category == 
     * Relationships
       * Has Many Organizations
@@ -281,32 +258,4 @@
       * Title:String
       * Body:Text 
 
-== Page ==
-    * Relationships
-      * Belongs to one Organization
-      * Has Many Paragraphs
-    * Attributes
-      * Title:String
-      
-== Paragraph ==
-    * Relationships
-      * Belongs to one Page
-    * Attributes
-      * Title:String
-      * Body:Text
-
-== MenuBar ==
-    * Relationships
-      * Belongs to one Page
-      * Has Many Menus
-    * Attributes
-      * Title:String
-  
-== Menu ==
-    * Relationships
-      * Belongs to one MenuBar
-      * Has Many Menus
-    * Attributes
-      * Title:String
-      * URL:String    
-      
+<font color="red">*_UPDATE_*</font>: I Deleted *Theme, ThemeElement, ThemeRule, Page, Paragraph, Menu, MenuBar and MenuItem* for the sake of simplicity. Khaitb. 
