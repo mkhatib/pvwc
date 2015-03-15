@@ -1,0 +1,354 @@
+<font color='red'><b><i>UPDATE</i></b></font>: I Deleted **Theme, ThemeElement, ThemeRule, Page, Paragraph, Menu, MenuBar and MenuItem** for the sake of simplicity. Khaitb.
+
+# Entities List #
+
+## Organization ##
+  * Relationships
+    * Has Many Members
+    * Has Many VoluntaryWork
+    * Wins Many Prizes
+    * Has Many Articles
+    * <strike>Has Many Pages: Can have Paragraphs, Modules and Menus</strike>
+    * Has Many Event
+    * Has Many News
+    * Has Many Workshops
+    * Subscribed To By Many Volunteers
+    * Belongs To Many Categories (e.g. Non-Profit, Educational ...etc)
+    * <strike>Has One Theme: Theme contains just a CSS rules for the templetes </strike>
+    * Has Many Addresses
+  * Attributes
+    * Title:String
+    * Slogan:String - Short Description or Subtitle (shi3ar)
+    * Description:Text
+    * Logo:String - URL to the Logo Image
+    * MainPage:String - URL to the Main Page.
+
+## Member ##
+  * Relationships
+    * Belongs to One Organization
+    * Has One Role (e.g. Comments Moderator, Administrator, Volunteer Moderator...etc)
+    * Has Many Emails
+    * Has Many Addresses
+  * Attributes
+    * FirstName:String
+    * MiddleName:String
+    * Lastname:String
+    * Birthday:Date
+    * Sex:int - (0:male, 1:female)
+    * Status:int - (e.g. 0:Single, 1:Married...etc)
+    * Interests:Text
+    * Websites:Text
+
+## VoluntaryWork ##
+  * Relationships
+    * Belongs to One Organization
+    * Wins Many Prizes (e.g. The Most Intuitive Voluntary Work)
+    * Has Many Incentives (e.g. Transportation Money)
+    * Has Many Groups
+    * Has Many Tasks (e.g. Cleaning The Streets, Planning Trees, Watering Trees..etc)
+  * Attributes
+    * Title:String
+    * Description:Text
+    * Place:String
+    * StartingDate:Date
+    * EndingDate:Date
+
+## Group ##
+  * Relationships
+    * Belongs to One VoluntaryWork
+    * Wins Many Prizes
+    * Has Many Volunteers
+    * Has Many Notes
+    * Has Many Updates
+    * Has Many Questions
+    * Has Many Tasks
+  * Attributes
+    * Title:String
+    * Description:Text
+
+## Volunteer ##
+  * Relationships
+    * Belongs to many Groups
+    * Wins Many Prizes
+    * Subscribes to Many Organizations
+    * Has Many Tasks
+    * Has Many VolunteerIncentive
+    * Has Many TraningCourses
+    * Has Many Languages
+  * Attributes
+    * FirstName:String
+    * MiddleName:String
+    * ThirdName:String
+    * Lastname:String
+    * Birthday:Date
+    * Sex:int - (0:male, 1:female)
+    * Status:int - (e.g. 0:Single, 1:Married...etc)
+    * Interests:Text
+    * Websites:Text
+    * Nationality:String
+    * PassportType:String
+    * PassportNumber:String
+    * Blood:String
+    * SSN:String
+    * Mobile:String
+    * HomePhone:String
+    * WorkPhone:String
+    * Fax:String
+
+
+
+**Note:** There should be a generalized Entity (e.g. Person, or User) that is a super class for Volunteer and Member.
+
+## Question ##
+  * Relationships
+    * Belongs to one Group
+    * Has Many Answers
+    * Asked By One Volunteer
+  * Attributes
+    * Title:String
+    * Body:Text
+
+## Answer ##
+  * Relationships
+    * Belongs to One Question
+    * belongs to one Volunteer
+  * Attributes
+    * Title:String
+    * Body:Text
+
+## Note ##
+  * Relationships
+    * Belongs to one Group
+    * Belongs to one Volunteer
+  * Attributes
+    * Title:String
+    * Body:Text
+
+**Note:** I Removed Entity _Update_ here because I didn't see any difference between it an _Note_.
+
+## Prize ##
+  * Relationships
+    * Belongs to one Groups
+    * Belongs to one VoluntaryWork
+    * Belongs to one Organization
+    * Belongs to one Volunteer
+  * Attributes
+    * Title:String
+    * NumberOfWinners:int
+    * Level:int (e.g. 0:Organizational, 1:VoluntaryWork, 2:Group, 3:Volunteer )
+    * prize:String (e.g. 1000$, Golden Medal...etc)
+
+## Task ##
+  * Relationships
+    * Belongs to one Group
+    * Belongs to one VoluntaryWork
+    * Belongs to one Volunteer
+  * Attributes
+    * Title:String
+    * Description:Text
+    * Percentage:Double (e.g. 20%)
+    * Finished:Boolean
+
+**Note:** Task Percentage and Finished Flag, could help us determine the progress of the Voluntary Work, or the Group it self, and from there we can calculate any Graphical Parameter such as Bar Chart.
+
+## Role ##
+  * Relationships
+    * Has Many Members
+    * Has Many Permissions
+  * Attributes
+    * Title:String
+    * Description:Text
+
+## Permission ##
+  * Relationships
+    * Belongs to Many Roles
+  * Attributes
+    * Title:String
+    * Action:String (e.g. Delete, Add ...etc)
+
+**Note:** I am not very satisfied by the Role, Permission Schema, There must be more advanced way to do it. We Should look into it!
+
+## Address ##
+  * Relationships
+    * Belongs to one Town
+    * Belongs to one Volunteer
+    * Belongs to one Member
+    * Belongs to one Organization
+    * Belongs to one Event
+  * Attributes
+    * Street:String
+    * Near:String
+    * Building:String
+    * Floor:String
+
+
+## Town ##
+  * Relationships
+    * Belongs to one City
+    * Has Many Addresses
+  * Attributes
+    * Title:String
+
+## City ##
+  * Relationships
+    * Belongs to one Country
+    * Has Many Towns
+  * Attributes
+    * Title:String
+
+## Country ##
+  * Relationships
+    * Has Many Cities
+  * Attributes
+    * Title:String
+
+
+## Email ##
+  * Relationships
+    * Belongs to one Volunteer
+    * Belongs to one Employee
+    * Belongs to one Organization
+  * Attributes
+    * Email:String
+
+## Category ##
+  * Relationships
+    * Has Many Organizations
+    * Has Many Events
+  * Attributes
+    * Title:String (e.g. Non-Profit, Global ...etc)
+    * Description:Text
+
+## News ##
+  * Relationships
+    * Has Many Comments
+    * Belongs to one Organization
+  * Attributes
+    * Title:String
+    * Body:Text
+
+## Article ##
+  * Relationships
+    * Has Many Comments
+    * Belongs to one Organization
+  * Attributes
+    * Title:String
+    * Body:Text
+
+## Event ##
+  * Relationships
+    * Has Many Comments
+    * Has Many Addresses
+    * Belongs to one Organization
+  * Attributes
+    * Title:String
+    * Body:Text
+    * StartsAt:Datetime
+    * EndsAt:Datetime
+    * HostedBy:String
+
+## Comment ##
+  * Relationships
+    * Belongs to one Event
+    * Belongs to one Article
+    * Belongs to one Workshop
+    * Belongs to one News
+    * Belongs to one Volunteer
+    * Belongs to one Member
+  * Attributes
+    * Title:String
+    * Body:Text
+
+## Incentive ##
+  * Relationships
+    * Belongs to one Voluntary Work
+  * Attributes
+    * Title:String
+    * Description:Text
+
+## Workshop ##
+  * Relationships
+    * Belongs to one Organization
+    * Has Many Comments
+  * Attributes
+    * Title:String
+    * Body:Text
+
+<font color='red'><b><i>UPDATE</i></b></font>: I Deleted **Theme, ThemeElement, ThemeRule, Page, Paragraph, Menu, MenuBar and MenuItem** for the sake of simplicity. Khaitb.
+
+## TrainingCourse ##
+  * Relationships
+    * Belongs to one Volunteer
+    * Has one Address
+  * Attributes
+    * Type:String
+    * CenterName:String
+    * StartingDate:Date
+    * EndingDate:Date
+    * Notes:Text
+
+
+## VolunteerIncentive ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * Incentive:String
+    * Shown:Boolean
+
+## Languages ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * language:String
+
+## Experience ##
+  * Relationships
+    * Belongs to one Volunteer
+    * Has one Address
+  * Attributes
+    * PlaceName:String
+    * StartingDate:Date
+    * EndingDate:Date
+    * WorkDone:Text
+
+## FavoriteCategory ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * category:String
+
+## DesiredWorkingTime ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * day:int
+    * dayTime:int
+
+## DesiredVoluntaryFeilds ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * Feild:String
+    * Description:Text
+
+
+
+
+## WayOfWorking ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * Way:String
+    * Description:Text
+    * Shown:Boolean
+
+
+
+## FavoriteState ##
+  * Relationships
+    * Has Many Volunteers
+  * Attributes
+    * State:String
+    * From:String
+    * To:String
+
